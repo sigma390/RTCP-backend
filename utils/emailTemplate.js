@@ -1,7 +1,5 @@
-
-
 export const gmailContent = (verificationToken, username) => {
-    return `
+  return `
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -58,7 +56,7 @@ export const gmailContent = (verificationToken, username) => {
     <body>
       <div class="container">
         <h1>Email Verification</h1>
-        <p>Please take a moment to verify your email for RealTimeEdify, Edit in Real time</p>
+        <p>Please take a moment to verify your email for RTCPlatform, Edit in Real time</p>
         <div style="text-align: center; margin-top: 20px;">
           <h2>Hello ${username},</h2>
           <p>Slacky300 appreciates your commitment to securing your account. To proceed, kindly click the button below to verify your email:</p>
@@ -69,12 +67,10 @@ export const gmailContent = (verificationToken, username) => {
     </html>
     
         `;
-  
-  }
+};
 
-  
 export const successFullVerification = (username) => {
-    return `
+  return `
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -140,6 +136,4 @@ export const successFullVerification = (username) => {
     </html>
     
     `;
-  }
-  
-  
+};

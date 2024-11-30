@@ -1,12 +1,12 @@
-import cors from 'cors';
 import express from 'express';
-import path, { dirname } from 'path';
 import { Server } from 'socket.io';
-import { fileURLToPath } from 'url';
 import { socketCtrl } from './controllers/socket.controller.js';
-import documentRouter from './routes/document.routes.js';
+import { fileURLToPath } from 'url';
+import path, { dirname } from 'path';
 import userRouter from './routes/user.routes.js';
+import documentRouter from './routes/document.routes.js';
 import dbConnect from './utils/dbConnect.js';
+import cors from 'cors';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -35,7 +35,7 @@ const io = new Server(server, {
   pingTimeout: 60000,
   cors: {
     origin: '*',
-    methods: ['GET', 'POST'],
+    methods: ['GET', 'POST']
   },
 });
 
